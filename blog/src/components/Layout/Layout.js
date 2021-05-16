@@ -14,6 +14,7 @@ const Content = styled.div`
   max-width: 960px;
   padding: 0 1.0875rem 1.45rem;
   padding-top: 0;
+
 `
 
 const Layout = ({ children }) => {
@@ -28,18 +29,19 @@ const Layout = ({ children }) => {
   `)
 
   return (
-      <ThemeProvider theme={Gray}>
-        <GlobalStyle />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Content>
-          <Main m={20}>{children}</Main>
-          <Footer>
-           © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.com">Gatsby</a>, by Jouliet
-          </Footer>
-        </Content>
-      </ThemeProvider>
+    <ThemeProvider theme={Gray}>
+      <GlobalStyle />
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <Content>
+        <Main m={20}>{children}</Main>
+        <Footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>, by{" "}
+          <strong>Jouliet Morales</strong>
+        </Footer>
+      </Content>
+    </ThemeProvider>
   )
 }
 

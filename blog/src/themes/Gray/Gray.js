@@ -1,6 +1,7 @@
 import React from 'react'
 import mainHeaderImage from './images/react.png'
 import { Search } from 'styled-icons/feather'
+import { Flex } from 'rebass'
 
 const images = {
     mainHeaderImage
@@ -8,6 +9,7 @@ const images = {
 
 const icons = {
     Search: <Search/>
+    
 }
 
 const theme = {

@@ -5,7 +5,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: "Cool Blog",
+    title: "Portfolio",
     description: "ITDEV-164 Gatsby Blog.",
     author: "Jouliet Morales",
     contact: {
@@ -15,6 +15,7 @@ module.exports = {
     },
   },
   plugins: [
+    "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-contentful",
       options: {
@@ -22,7 +23,7 @@ module.exports = {
         accessToken: `${process.env.ACCESS_TOKEN}`,
       },
     },
-    "gatsby-plugin-styled-components",
+
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
@@ -41,6 +42,17 @@ module.exports = {
         icon: "src/images/gatsby-icon.png",
       },
     },
+/*
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "gatsby-starter-default",
+        start_url: "/",
+        display: "minimal-ui",
+        video: "src/components/Assets/Videos/video.mp4",
+      },
+    },
+*/
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     "gatsby-plugin-offline",

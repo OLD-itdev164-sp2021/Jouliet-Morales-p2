@@ -1,11 +1,17 @@
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 //adding new footer styled
 footer {
-  position: absolute;
+  position: Fixed;
   right: 0;
   bottom: 0;
   left: 0;
@@ -24,6 +30,7 @@ html {
     overflow-y: scroll;
   }
   body {
+    padding-bottom:60px;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -69,6 +76,7 @@ html {
     display: none;
   }
   a {
+    text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
   }
@@ -78,7 +86,7 @@ html {
   }
   abbr[title] {
     border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-    cursor: help;
+    cursor: help;t
     text-decoration: none;
   }
   b,
@@ -89,6 +97,7 @@ html {
   dfn {
     font-style: italic;
   }
+  
   h1 {
     margin-left: 0;
     margin-right: 0;
@@ -282,7 +291,7 @@ html {
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
-    font-size: 1.62671rem;
+    font-size: 4em; //1.62671rem
     line-height: 1.1;
   }
   h3 {
@@ -293,13 +302,14 @@ html {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
     color: inherit;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
-    font-size: 1.38316rem;
+    font-size: 3em; //1.38316rem
+    font-weight: 400;
+    margin-bottom: 20px;
     line-height: 1.1;
   }
   h4 {
